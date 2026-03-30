@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neumorphism Login & Signup</title>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="message-box">Action Successful!</div>
+
+    <div class="container" id="container">
+        
+        <!-- Sign Up Container -->
+        <div class="form-container sign-up-container">
+            <form onsubmit="handleForm(event, 'Account Created!')">
+                <h2>Create Account</h2>
+                <div class="social-login">
+                    <a href="#" class="social-btn"><i class="fab fa-google"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span style="font-size: 12px; color: var(--text-secondary); margin-bottom: 15px;">or use your email for registration</span>
+                
+                <div class="input-group">
+                    <input type="text" placeholder="Name" required />
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="input-group">
+                    <input type="email" placeholder="Email" required />
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Password" required />
+                    <i class="fas fa-lock"></i>
+                </div>
+                
+                <button class="btn" style="margin-top: 10px;">Sign Up</button>
+                <div class="mobile-toggle" onclick="toggleMobile()">Already have an account? Sign In</div>
+            </form>
+        </div>
+
+        <!-- Sign In Container -->
+        <div class="form-container sign-in-container">
+            <form onsubmit="handleForm(event, 'Login Successful!')">
+                <div class="logo">
+                    <i class="fas fa-fingerprint"></i>
+                </div>
+                <h2>Sign in</h2>
+                <div class="social-login">
+                    <a href="#" class="social-btn"><i class="fab fa-google"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span style="font-size: 12px; color: var(--text-secondary); margin-bottom: 15px;">or use your account</span>
+                
+                <div class="input-group">
+                    <input type="email" placeholder="Email" required />
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Password" required />
+                    <i class="fas fa-lock"></i>
+                </div>
+                
+                <a href="#" class="footer-link">Forgot your password?</a>
+                <button class="btn" style="margin-top: 20px;">Sign In</button>
+                <div class="mobile-toggle" onclick="toggleMobile()">Don't have an account? Sign Up</div>
+            </form>
+        </div>
+
+        <!-- Overlay Container -->
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <button class="btn ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <button class="btn ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
